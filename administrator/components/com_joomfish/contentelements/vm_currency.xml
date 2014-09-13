@@ -1,0 +1,14 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Currency</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Currency)</description>
+  <reference>
+  	<table name="vm_currency">
+  		<field type="referenceid" name="currency_id" translate="0">ID</field>
+  		<field type="titletext" name="currency_name" translate="1">Currency Name</field>
+  		<field type="text" name="currency_code" translate="1">Currency Code</field>
+  	</table>
+  </reference>
+</joomfish>

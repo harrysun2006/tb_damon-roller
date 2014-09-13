@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jceplugin" plugin="advlink">
+	<name>Advanced Link</name>
+	<version>1.0.3</version>
+	<creationDate>2005</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.cellardoor.za.net/jce</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description><![CDATA[
+    Advanced Link plugin for JCE, version 1.0.3<br />
+    Changelog (from 1.0.2)<br />
+    <ul>
+        <li>Fixed ItemID errors.</li>
+        <li>Fixed Select List auth errors.</li>
+        <li>Added Menu Items Select List.</li>
+    </ul>
+    Changelog (from 1.0.1)<br />
+    <ul>
+        <li>Fixed permissions errors relating to missing isSuperAdmin variable.</li>
+    </ul>
+    Changelog (from 1.0.0)<br />
+    <ul>
+        <li>Cleaned up authentication routines.</li>
+        <li>Removed redundant authentication check.</li>
+    </ul>
+    ]]></description>
+	<icon></icon>
+	<layout_icon></layout_icon>
+	<elements></elements>
+	<files>
+        <filename plugin="advlink">editor_plugin.js</filename>
+        <filename>link.php</filename>
+        <filename>index.html</filename>
+        <filename>search.php</filename>
+        <filename>search.html.php</filename>
+        <filename>searchbot.php</filename>
+        <filename>css/advlink.css</filename>
+        <filename>css/index.html</filename>
+        <filename>images/index.html</filename>
+        <filename>images/advlink.gif</filename>
+        <filename>jscripts/index.html</filename>
+        <filename>jscripts/functions.js</filename>
+        <filename>langs/index.html</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/en.php</filename>
+	</files>
+	<params>
+        <param name="article_level" type="list" default="18" label="Article List Access" description="Select Article List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="section_level" type="list" default="18" label="Section List Access" description="Select Section List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="category_level" type="list" default="18" label="Category List Access" description="Select Category List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="static_level" type="list" default="18" label="Static Content List Access" description="Select Static Content List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="contact_level" type="list" default="18" label="Contacts List Access" description="Select Contacts List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="menu_level" type="list" default="18" label="Menu List Access" description="Select Menu List Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="search_level" type="list" default="18" label="Search Access" description="Select Search Access Level">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+    </params>
+</mosinstall>

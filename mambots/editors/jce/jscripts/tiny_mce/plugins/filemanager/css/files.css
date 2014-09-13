@@ -1,0 +1,88 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div#imgDiv { /* IE, Firefox */
+	color: #000000;
+	background-color: #ffffff;
+	margin: 0px;
+	width: 100%;
+	overflow: auto;
+}
+* html div#imgDiv {
+	margin-left: -1px;
+}
+div#imgDiv ul {
+	white-space: nowrap;
+	line-height: 12px;
+	list-style: none;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+div#dirDiv { /* IE, Firefox */
+	color: #000000;
+	background-color: #ffffff;
+	margin: 0px;
+	width: 100%;
+	overflow: auto;
+}
+* html div#dirDiv {
+	margin-left: -1px;
+}
+div#dirDiv ul {
+	white-space: nowrap;
+	line-height: 12px;
+	list-style: none;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+div#dirDiv li {
+    margin: 0px;
+    padding: 4px;
+    display: block;
+    font-size: 9pt;
+    font-family: "MS Sans Serif", Geneva, sans-serif;
+    color:#000000;
+}
+a {
+color: black;
+}
+a:visited {
+color: black;
+}
+.selected {
+    background:	#c0d2ec;
+    color:		#c0d2ec;
+}
+table {
+    border-collapse:	collapse;
+    background:			Window;
+}
+td {
+    font:				icon;
+    padding:			2px 5px;
+    cursor:				pointer;
+    -moz-user-select:	none;
+}
+li:hover, li.hover
+{
+  background-color: #c0d2ec;
+}
+tr:hover, tr.hover
+{
+  background-color: #c0d2ec;
+}
+.hover_on {
+    background-color: #c0d2ec;
+}
+.hover_off {
+    background-color: #ffffff;
+}
+

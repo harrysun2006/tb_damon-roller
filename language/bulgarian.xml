@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mosinstall version="1.0.10" type="language">
+	<name>Bulgarian</name>
+	<version>1.0.10</version>
+	<creationDate>27.06.2006</creationDate>
+	<author>Imago</author>
+	<authorEmail>imago@abv.bg</authorEmail>
+	<files>
+		<filename>bulgarian.php</filename>
+		<filename>bulgarian.ignore.php</filename>
+	</files>
+</mosinstall>

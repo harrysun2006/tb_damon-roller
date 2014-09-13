@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jceplugin" plugin="imgmanager">
+	<name>Image Manager</name>
+	<version>1.0.4</version>
+	<creationDate>2005</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.cellardoor.za.net/jce</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description>
+    <![CDATA[
+    Image Manager plugin for JCE, version 1.0.4</br>
+    Changelog (from 1.0.3)</br>
+    <ul>
+        <li>Fixed errors when converting underscores to spaces for popup images.</li>
+    </ul>
+    Changelog (from 1.0.2)</br>
+    <ul>
+        <li>Fixed permissions errors relating to missing isSuperAdmin variable.</li>
+        <li>Fixed javascript errors relating to missing functions when altering image appearance(hspace, vspace, border etc.).</li>
+        <li>Fixed issues relating to updating popup links</li>
+    </ul>
+    Changelog (from 1.0.1)</br>
+    <ul>
+        <li>Removed redundant authentication check.</li>
+        <li>Cleaned up authentication routines.</li>
+        <li>Added thumb quality option to thumbnail creation dialog.</li>
+        <li>Possible fix for phpThumb temp directory error.</li>
+        <li>Added set permissions to created thumbnail.</li>
+        <li>Cleaned up Upload dialog</li>
+        <li>Rebuilt popup image code. Should now play nicely with relative urls, sef and IE.</li>
+    </ul>
+    ]]>
+    </description>
+	<icon>imgmanager</icon>
+	<layout_icon>imgmanager</layout_icon>
+	<elements></elements>
+	<files>
+        <filename plugin="imgmanager">editor_plugin.js</filename>
+        <filename>index.html</filename>
+        <filename>manager.php</filename>
+        <filename>images.php</filename>
+        <filename>view.php</filename>
+        <filename>preview.php</filename>
+        <filename>index.php</filename>
+        <filename>classes/manager.class.php</filename>
+        <filename>classes/index.html</filename>
+        <filename>classes/phpthumb/index.html</filename>
+        <filename>classes/phpthumb/phpThumb.php</filename>
+        <filename>classes/phpthumb/phpthumb.class.php</filename>
+        <filename>classes/phpthumb/phpThumb.config.php</filename>
+        <filename>classes/phpthumb/phpthumb.filters.php</filename>
+        <filename>classes/phpthumb/phpthumb.functions.php</filename>
+        <filename>classes/phpthumb/phpthumb.gif.php</filename>
+        <filename>classes/phpthumb/phpthumb.license.txt</filename>
+        <filename>css/manager.css</filename>
+        <filename>css/images.css</filename>
+        <filename>css/index.html</filename>
+        <filename>docs/help.php</filename>
+        <filename>docs/index.html</filename>
+        <filename>docs/images/index.html</filename>
+        <filename>docs/images/en/index.html</filename>
+        <filename>docs/images/en/im_layout.jpg</filename>
+        <filename>docs/images/en/im_insert1.jpg</filename>
+        <filename>docs/images/en/im_insert2.jpg</filename>
+        <filename>docs/images/en/im_insert3.jpg</filename>
+        <filename>docs/images/en/im_popup1.jpg</filename>
+        <filename>docs/images/en/im_popup2.jpg</filename>
+        <filename>docs/images/en/im_popup3.jpg</filename>
+        <filename>docs/images/en/im_popup4.jpg</filename>
+        <filename>docs/images/en/im_rollover1.jpg</filename>
+        <filename>docs/images/en/im_rollover2.jpg</filename>
+        <filename>docs/images/en/upload.jpg</filename>
+        <filename>images/imgmanager.gif</filename>
+        <filename>images/gif.gif</filename>
+        <filename>images/jpg.gif</filename>
+        <filename>images/png.gif</filename>
+        <filename>images/list.gif</filename>
+        <filename>images/images.gif</filename>
+        <filename>images/sample.gif</filename>
+        <filename>images/spacer.gif</filename>
+        <filename>images/thumb.gif</filename>
+        <filename>images/thumb_create.gif</filename>
+        <filename>images/thumb_delete.gif</filename>
+        <filename>images/index.html</filename>
+        <filename>jscripts/manager.js</filename>
+        <filename>jscripts/images.js</filename>
+        <filename>jscripts/index.html</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/en.php</filename>
+        <filename>langs/index.html</filename>
+    </files>
+	<params>
+        <param name="dir" type="text" default="/images/stories" label="Image Directory Path" description="Path to image directory."/>
+        <param name="url" type="text" default="/images/stories" label="Image Directory URL" description="URL to image directory."/>
+        <param name="create_folder" type="list" default="1" label="Create Image Directory" description="Creates the above Image Directory on first load if it does not exist.">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </param>
+        <param name="mode" type="list" default="list" label="Default Display Mode" description="Default display mode for image window.">
+            <option value="list">Image List</option>
+            <option value="images">Thumbnails</option>
+        </param>
+        <param name="thumb_size" type="text" default="150" label="Default Thumbnail Size" description="Default size for thumbnails."/>
+        <param name="thumb_prefix" type="text" default="thumb_" label="Thumbnail Prefix" description="Prefix to identify image as a thumbnail."/>
+        <param name="thumb_dir" type="text" default="thumbnails" label="Thumbnail Directory" description="Name of thumbnail directory."/>
+        <param name="resize" type="text" default="600" label="Upload Resize Default Size (px)" description="Default maximum width/height size for resizing during upload."/>
+        <param name="@spacer" type="spacer" default="" label="Image Manager Defaults" description="" />
+        <param name="hspace" type="text" default="5" label="Default HSpace value" description="Default HSpace value"/>
+        <param name="vspace" type="text" default="5" label="Default VSpace value" description="Default VSpace value"/>
+        <param name="border" type="text" default="0" label="Default Border value" description="Default Border value"/>
+        <param name="align" type="list" default="left" label="Default Align value" description="Default Align value">
+                <option value="">Default</option>
+                <option value="baseline">Baseline</option>
+                <option value="top">Top</option>
+                <option value="middle">Middle</option>
+                <option value="bottom">Bottom</option>
+                <option value="texttop">Text Top</option>
+                <option value="absolute middle">Absolute Middle</option>
+                <option value="absolute bottom">Absolute Bottom</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+        </param>
+        <param name="@spacer" type="spacer" default="" label="Image Manager Access" description="" />
+        <param name="upload" type="list" default="18" label="Allow Upload" description="Select access level to allow Uploads">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="folder_new" type="list" default="18" label="Allow Folder Create" description="Select access level to allow Folder Create">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="folder_del" type="list" default="18" label="Allow Folder Delete" description="Select access level to allow Folder Delete">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="folder_ren" type="list" default="18" label="Allow Folder Rename" description="Select access level to allow Folder Renaming">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="img_del" type="list" default="18" label="Allow Image Deleteing" description="Select access level to allow Image Deleting">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="img_ren" type="list" default="18" label="Allow Image Renaming" description="Select access level to allow Image Renaming">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="img_move" type="list" default="18" label="Allow Image Cut/Copy/Paste" description="Select access level to allow Image Cut/Copy/Paste">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="img_edit" type="list" default="18" label="Allow Image Editing" description="Select access level to allow Image Editing">
+            <option value="0">**Disabled**</option>
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+		<param name="user_dir" type="list" default="0" label="Use Usertype/Username Access">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="dir_type" type="list" default="level" label="Restriction Type">
+            <option value="level">Usertype</option>
+            <option value="name">Username</option>
+            <option value="level_name">Usertype/Username</option>
+        </param>
+        <param name="user_dir_level" type="list" default="18" label="Restriction Level">
+			<option value="18">Registered</option>
+			<option value="19">-Author</option>
+			<option value="20">--Editor</option>
+			<option value="21">---Publisher</option>
+			<option value="23">----Manager</option>
+			<option value="24">-----Administrator</option>
+			<option value="25">------Super Administrator</option>
+		</param>
+    </params>
+</mosinstall>

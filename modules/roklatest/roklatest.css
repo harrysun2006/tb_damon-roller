@@ -1,0 +1,25 @@
+.moofx-toggler {
+	display: block;
+	float: left;
+	width: 20px;
+	height: 18px;
+	background: url(closed.gif) no-repeat;
+}
+
+.moofx-toggler-down {
+	background: url(open.gif) no-repeat;
+}
+
+.moofx-title a {
+	line-height: 16px;
+}
+
+.moofx-slider {
+	padding-left: 20px;
+}
+
+.moofx-bottom {
+	margin-top: 3px;
+	height: 3px;
+	overflow: hidden;
+}

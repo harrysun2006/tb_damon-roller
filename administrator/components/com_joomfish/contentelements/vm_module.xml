@@ -1,0 +1,14 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Modules</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Modules)</description>
+  <reference>
+  	<table name="vm_module">
+  		<field type="referenceid" name="module_id" translate="0">ID</field>
+  		<field type="titletext" name="module_name" translate="1">Module Name</field>
+  		<field type="htmltext" name="module_description" translate="1">Module Description</field>
+  	</table>
+  </reference>
+</joomfish>

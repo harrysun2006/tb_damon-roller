@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="module" version="1.0.8">
+	<name>Content Item</name>
+	<author>Eike Pierstorff</author>
+	<creationDate>April 2006</creationDate>
+	<copyright>(C) 2005 Eike Pierstorff</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>eikepierstorff@pierstorff.com</authorEmail>
+	<authorUrl>www.pierstorff.com</authorUrl>
+	<version>0.5</version>
+	<description>This module shows a content item or all items in a category or section specified by Id or any number of content
+    items, categories or sections specified by a comma separate list of ids. You can merge nultiple items into one document, useful for print
+		and pdf.
+		</description>
+	<files>
+		<filename module="mod_contentitem">mod_contentitem.php</filename>
+        <filename>changelog.txt</filename>		        
+		<filename>mod_contentitem/mod_contentitem_helper.php</filename>		
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+		<param name="cache" type="radio" default="0" label="Enable Cache" description="Select whether to cache the content of this module">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+<param name="ctype" type="list" default="1" label="Type" description="Content Item / Cat /Section">
+			<option value="1">Content Item</option>
+			<option value="2">Category</option>
+			<option value="3">Section</option>			
+		</param>		
+		<param name="mod_itemid" type="text" default="" label="ID" description="Selects items by ID." />
+		<param name="num_of_items" type="text" default="" label="Number of items" description="Number of items to display" />
+    <param name="num_of_cols" type="text" default="" label="Number of columns" description="Number of columns" />		
+    <param name="leading" type="text" default="" label="Number of leading paragraphs" description="Number of leading paragraphs" />		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="readmore" type="radio" default="0" label="Read More" description="Show/Hide the Read More button">
+            <option value="0">Hide</option>
+            <option value="1">Show</option>
+        </param>
+		<param name="fulltext" type="radio" default="0" label="Fulltext" description="Show/Hide Fulltext">
+            <option value="0">Hide</option>
+            <option value="1">Show</option>
+        </param>				
+		<param name="item_title" type="list" default="2" label="Item Title" description="Show/Hide Item Title (overrides setting from item parameters">
+            <option value="1">Hide</option>
+            <option value="2">Show</option>
+        </param>							
+		<param name="link_titles" type="list" default="1" label="Link Item Titles" description="Link Item Titles">
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </param>											
+					
+		<param name="pdf" type="list" default="1" label="PDF Button" description="Show/Hide the PDF button">
+            <option value="0">Use global</option>
+            <option value="1">Hide</option>
+            <option value="2">Show</option>
+						
+        </param>				
+		<param name="print" type="list" default="0" label="Print Button" description="Show/Hide the Print button">
+            <option value="1">Use global</option>
+            <option value="1">Hide</option>
+            <option value="2">Show</option>
+				</param>			
+		<param name="author" type="list" default="1" label="Display Author " description="Show/Hide the Author name">
+            <option value="0">Use global</option>
+            <option value="1">Hide</option>
+            <option value="2">Show</option>
+</param>	
+		<param name="createdate" type="list" default="1" label="Create Date" description="Show/Hide Create Date">
+            <option value="0">Use global</option>
+            <option value="1">Hide</option>
+            <option value="2">Show</option>												
+        </param>			
+				
+		<param name="modifydate" type="list" default="1" label="Modify Date" description="Show/Hide Modify Date">
+            <option value="0">Use global</option>
+            <option value="1">Hide</option>
+            <option value="2">Show</option>												
+        </param>		
+				
+		<param name="show_images" type="list" default="0" label="Hide {mosimages}" description="Hide {mosimages}">
+            <option value="0">No</option>
+            <option value="1">Yes</option>												
+        </param>											
+		<param name="order" type="list" default="0" label="Order" description="Order of Items">
+            <option value="0">no ordering</option>		
+            <option value="1">by Item Title ascending</option>
+            <option value="2">by Item Title descending</option>
+            <option value="3">by ordering ascending</option>
+            <option value="4">by ordering descending</option>		
+
+            <option value="12">by Create Date ascending</option>
+            <option value="13">by Create Date descending</option>						
+
+            <option value="16">by Modified Date ascending</option>
+            <option value="17">by Modified Date descending</option>
+													
+            <option value="5">grouped by section/cat, ordering ascending</option>
+            <option value="6">grouped by section/cat, ordering descending</option>
+            <option value="7">grouped by section/cat, Item Title ascending</option>
+            <option value="8">grouped by section/cat, Item Title descending</option>													
+            
+						<option value="10">grouped by section/cat, Create Date ascending</option>
+            <option value="11">grouped by section/cat, Create Date descending</option>	
+						
+						<option value="14">grouped by section/cat, Modified Date ascending</option>
+            <option value="15">grouped by section/cat, Modified Date descending</option>
+								
+            <option value="9">Random selection</option>																
+        </param>							
+		<param name="@spacer" type="spacer" default="" label="" description="" />											
+		<param name="merge" type="radio" default="0" label="Merge Items" description="Merge Items into one Item (so they can be printed or pdf'd as one)">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>		
+    <param name="merged_title" type="text" default="" label="Merged Items Title" description="A global title for all merged items" />														
+    <param name="tocmarkup" type="list" default="false" label="TOC for merged Items" description="Create Table of Contents for merged Items">
+			<option value="false">none</option>
+			<option value="ul">Unordered List</option>
+			<option value="ol">Ordered List</option>
+			<option value="table">Table</option>			
+		</param>		
+		<param name="@spacer" type="spacer" default="" label="Misc" description="" />
+		<param name="cleanpdf" type="radio" default="0" label="Clean for PDF" description="Makes PDFs a little more readable but breaks the module on some severs">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>	
+		<param name="@spacer" type="spacer" default="" label="Unsupported" description="" />
+    <param name="allow_edit" type="radio" default="0" label="Allow edit" description="Allow edit for registered users. Editor will open in main content area. This is an unsupported option.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>   
+	</params>
+</mosinstall>

@@ -1,0 +1,79 @@
+td.box {
+	border: 1px solid black;
+	background-color: white;
+	-moz-border-radius: 0px;
+}
+table.box, table.box1, table.box2, table.box3 {
+	font-size: 11px;
+	font-family: Arial, Courier New, serif;
+	color: black;
+	text-align: center;
+	line-height: 11px;
+	border: 0px none white;
+	border-spacing: 0px;
+	border-collapse: seperate;
+	background-color: white;
+}
+table.box1 {line-height: 16px;}
+table.box2 {line-height: 16px; border-collapse: collapse;}
+table.box3 {line-height: 11px; border-collapse: collapse;}
+table.box2 td, table.box3 td {border: 1px solid black;}
+table.box2 td.nr, table.box3 td.nr {border-style: solid none solid solid;}
+table.box2 td.nl, table.box3 td.nl {border-style: solid solid solid none;}
+table.box3 td.ntbl {border-style: none solid none none;}
+table.box3 td.ntl {border-style: none solid solid none;}
+table.box3 td.nbl {border-style: solid solid none none;}
+tr.header, tr.header1, tr.header2 {
+	font-size: 11px;
+	font-family: Arial, Courier New, serif;
+	line-height: 11px;
+	padding-top: 3px;
+	background-color: #FFEE66;
+}
+tr.header1 {line-height: 12px;}
+tr.header2 {line-height: 12px;}
+td.note {font-weight: bold; color: red;}
+td.t1 {font-size: 12px; font-family: Arial; line-height: 12px;}
+td.nt0 {border-top: 0px none black;}
+td.n, td.nt, td.ntr, td.ntrb, td.ntrbl, td.ntrl, td.ntb, td.ntbl, td.ntl, td.nr, td.nrb, td.nrbl, td.nrl, td.nb, td.nbl,td.nl {border: 1px solid black;}
+td.nt {border-style: none solid solid solid;}
+td.ntr {border-style: none none solid solid;}
+td.ntrb {border-style: none none none solid;}
+td.ntrbl {border-style: none;}
+td.ntrl {border-style: none none solid none;}
+td.ntb {border-style: none solid none solid;}
+td.ntbl {border-style: none solid none none;}
+td.ntl {border-style: none solid solid none;}
+td.nr {border-style: solid none solid solid;}
+td.nrb {border-style: solid none none solid;}
+td.nrbl {border-style: solid none none none;}
+td.nrl {border-style: solid none solid none;}
+td.nb {border-style: solid solid none solid;}
+td.nbl {border-style: solid solid none none;}
+td.nl {border-style: solid solid solid none;}
+
+# some styles come from the template
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.product_name {
+	text-align: right;
+	font-weight: 900;
+	color: #000000;
+	font-size: 24px;	
+}
+.product_desc_line{
+	background-image: url(../images/pd_line.jpg);
+	background-repeat: repeat-x;
+	padding-left: 20px;
+}
+.bold {font-size: 12px; font-weight: bold;}
+table.wxq1, table.wxq2 {font-size: 12px; font-weight: normal;}
+table.wxq3 {font-size: 14px; font-weight: normal;}
+table.wxq2 {text-align: center; border-width: 1px; boder-color: black; border-style: solid none;}
+table.wxq2 td {border: 1px solid #E6E6E6; border-style: none solid none none;}
+table.wxq2 tr.even{background-color: #E3EDEE; font-weight: normal;}
+td.btg {border: 1px solid gray; border-style: solid none none none;}

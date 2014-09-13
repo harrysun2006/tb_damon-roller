@@ -1,0 +1,13 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Order Status</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Order Status)</description>
+  <reference>
+  	<table name="vm_order_status">
+  		<field type="referenceid" name="order_status_id" translate="0">ID</field>
+  		<field type="titletext" name="order_status_name" translate="1">Status Name</field>
+  	</table>
+  </reference>
+</joomfish>

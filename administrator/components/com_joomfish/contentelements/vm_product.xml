@@ -1,0 +1,22 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Products</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Products)</description>
+  <reference>
+  	<table name="vm_product">
+  		<field type="referenceid" name="product_id" translate="0">ID</field>
+  		<field type="titletext" name="product_name" translate="1">Name</field>
+  		<field type="textarea" name="product_s_desc" translate="1">Short description</field>
+  		<field type="htmltext" name="product_desc" translate="1">Description</field>
+  		<field type="text" name="attribute" translate="1">Attribute</field>
+  		<field type="text" name="custom_attribute" translate="1">custom attribute</field>
+  		<field type="created_date" name="cdate" translate="0">Created</field>
+  		<field type="modified_date" name="mdate" translate="0">Modified</field>
+  	</table>
+  </reference>
+  <translationfilters>
+  	  <vm_category>category_id</vm_category>
+  </translationfilters>  	  
+</joomfish>

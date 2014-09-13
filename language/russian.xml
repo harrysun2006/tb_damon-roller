@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<mosinstall version="1.0" type="language">
+    <name>Russian</name>
+    <version>1.0.9</version>
+    <creationDate>06-06-2006</creationDate>
+    <author>AndyR, CTPAHHuK</author>
+    <authorEmail>strannik@ru-mambo.ru</authorEmail>
+    <files>
+        <filename>russian.php</filename>
+		<filename>russian.ignore.php</filename>
+    </files>
+</mosinstall>

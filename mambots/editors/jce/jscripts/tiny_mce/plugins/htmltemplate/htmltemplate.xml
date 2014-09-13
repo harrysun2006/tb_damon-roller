@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jceplugin" plugin="htmltemplate">
+	<name>HTML Template</name>
+	<version>1.0.0</version>
+	<creationDate>2005</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>N/A</authorEmail>
+	<authorUrl>N/A</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description>HTML Template plugins for JCE</description>
+	<icon>htmltemplate,savehtmltemplate</icon>
+	<layout_icon>templates</layout_icon>
+	<elements></elements>
+	<params>
+        <param name="@spacer" type="spacer" default="" label="HTML Template Options" description="" />
+        <param name="dir" type="text" default="/files" label="Template Path" description="Path to Template directory."/>
+    </params>
+	<files>
+		<filename plugin="htmltemplate">editor_plugin.js</filename>
+		<filename>blank.htm</filename>
+		<filename>htmltemplate.php</filename>
+		<filename>savehtmltemplate.php</filename>
+		<filename>jscripts/htmltemplate.js</filename>
+		<filename>jscripts/savehtmltemplate.js</filename>
+        <filename>css/htmltemplate.css</filename>
+		<filename>css/blank.css</filename>
+		<filename>css/index.html</filename>
+		<filename>images/htmltemplate.gif</filename>
+		<filename>images/savehtmltemplate.gif</filename>
+		<filename>images/templates.gif</filename>
+		<filename>langs/en.js</filename>
+		<filename>langs/index.html</filename>
+	</files>
+</mosinstall>

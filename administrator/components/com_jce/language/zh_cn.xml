@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jcelang" lang="zh_cn">
+	<name>zh_cn language</name>
+	<version>1.0</version>
+	<creationDate>2006-06-01</creationDate>
+	<author>DF</author>
+	<authorEmail>feng.ding@mancan.cn</authorEmail>
+	<authorUrl>http://www.mancan.cn</authorUrl>
+	<copyright>MANCAN</copyright>
+	<license>LGPL</license>
+	<description>Simplified Chinese Language pack for JCE 1.0.4</description>
+		<files>
+    		<filename language="zh_cn">langs/zh_cn.js</filename>
+    		<filename>themes/advanced/langs/zh_cn.js</filename>
+    		<filename>libraries/langs/zh_cn.php</filename>
+        <filename>plugins/_template/langs/zh_cn.js</filename>		  		
+        <filename>plugins/advhr/langs/zh_cn.js</filename>		
+        <filename>plugins/advimage/langs/zh_cn.js</filename>
+        <filename>plugins/advlink/langs/zh_cn.js</filename>
+        <filename>plugins/advlink/langs/zh_cn.php</filename>
+        <filename>plugins/autosave/langs/zh_cn.js</filename>        
+        <filename>plugins/directionality/langs/zh_cn.js</filename>
+        <filename>plugins/emotions/langs/zh_cn.js</filename>
+        <filename>plugins/filemanager/langs/zh_cn.js</filename>
+        <filename>plugins/filemanager/langs/zh_cn.php</filename>
+        <filename>plugins/fullscreen/langs/zh_cn.js</filename>
+        <filename>plugins/htmltemplate/langs/zh_cn.js</filename>
+        <filename>plugins/iframe/langs/zh_cn.js</filename>
+        <filename>plugins/imgmanager/langs/zh_cn.js</filename>
+        <filename>plugins/imgmanager/langs/zh_cn.php</filename>
+        <filename>plugins/imgmanagerlite/langs/zh_cn.js</filename>
+        <filename>plugins/imgmanagerlite/langs/zh_cn.php</filename>
+        <filename>plugins/joomla/langs/zh_cn.js</filename>    
+        <filename>plugins/mediamanager/langs/zh_cn.js</filename>
+        <filename>plugins/mediamanager/langs/zh_cn.php</filename>
+        <filename>plugins/paste/langs/zh_cn.js</filename>
+        <filename>plugins/preview/langs/zh_cn.js</filename>
+        <filename>plugins/print/langs/zh_cn.js</filename>
+        <filename>plugins/searchreplace/langs/zh_cn.js</filename>
+        <filename>plugins/table/langs/zh_cn.js</filename>
+        <filename>plugins/templates/langs/zh_cn.js</filename>        
+        <filename>plugins/templates/langs/zh_cn.php</filename>
+	</files>
+	<administration>
+  	<files>
+          <filename>zh_cn.php</filename>
+  	</files>
+	</administration>
+</mosinstall>

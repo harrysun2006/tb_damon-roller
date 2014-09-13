@@ -1,0 +1,14 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Manufacturer</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Manufacturer)</description>
+  <reference>
+  	<table name="vm_manufacturer">
+  		<field type="referenceid" name="manufacturer_id" translate="0">ID</field>
+  		<field type="titletext" name="mf_name" translate="1">Manufacturer Name</field>
+  		<field type="htmltext" name="mf_desc" translate="1">Manufacturer Description</field>
+  	</table>
+  </reference>
+</joomfish>

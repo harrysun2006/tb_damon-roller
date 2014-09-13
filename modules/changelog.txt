@@ -1,0 +1,113 @@
+mod_contentitem
+(c) 2006 Eike Pierstorff eikepierstorff@pierstorff.com
+GPL'd
+
+last change to the module: june 08 2006
+last change to this file: : june 08 2006
+
+Scroll down for the list of changes.
+
+module for Joomla 1.0.x www.joomla.org
+see this thread in the forum: http://forum.joomla.org/index.php/topic,36326.msg201327.html#msg201327
+and here: http://extensions.joomla.org/component/option,com_mtree/task,viewlink/link_id,498/Itemid,35/:
+
+"This modules allows for publishing content items or articles in areas other than mainBody(). Choose if you want to display a single item, all items from a category, all items from a section, or a number of content items/categories/sections specified by a comma separated list of ids. Simply enter the content item ID in the module's parameters field, assign a position to the module, and publish it. You can copy the module and assign a different name, position and contentitem id to the copy. Also includeds a "Read more" link option. With the "merge items" option you can merge multiple content items (/categories/sections) into one document for print and pdf. It will also create a table of contents for merged items (if you want to)."
+
+Since somebody asked: While I do get bitchy if work for hire isn't paid in time I do not need or want 
+donations for stuff that I've put under GPL. If you feel you must donate any money then donate it to 
+a charity (preferably a childrens fund) in your vicinity or give something to the Joomla Project. 
+If you want to boost my ego, which I'm afraid is not particularly neccessary but which I will gracefully 
+accept anyway tell me how and where you used this thing (doubly welcome if you actually liked it).
+
+There are no warranties. Don't try and sue me when your business fails due to errors in my module. Still I'll try and fix all errors that I know of.
+
+This has been tested with Joomla 1.0.8, PHP 4.4.1, Mysql 5.0,18, Apache 2
+(Apachefriends.org XAMPP Package) on WinXP Home. PHP was running in strict mode.
+
+added: As of June 8 2006 this is tested with Joomla 1.0.9
+
+There should be no problems with other setups (there might be problems with previous versions of Joomla), but it would still be a good idea to include a short description of your server in your bug reports, if you want to file a bug report that is.
+
+There should be the following files/directorys in the archive:
+changelog.txt (this file)
+mod_contentitem.xml 
+mod_contentitem.php
+mod_contentitem/mod_contentitem_helper.php
+
+Don't worry if articles you didn't create show up in the static content manager. This module creates temporary items in static content for print/pdf-view purposes on merged items. These will be dropped after some time.
+
+June 8/06
+ - fixed: removed css id to allow multiple modules
+ - fixed: (tentatively): ereg_replace for mospagebreak breaks module on some platforms
+ - added: Random selection in ordering options
+ - fixed/added: Parameter to disable pdfcleanup which breaks module on some platforms
+ 
+Mai 9/06
+- fixed: linked title only worked with "readmore"-Link enabled which was kind of pointless
+
+Mai 1/06
+- support for rows with leading paragraphs (like on frontpage). 
+- support for linked titles
+
+-- 
+
+April 10/06
+- fixed: bugfix from 04/9/6 didn't work 
+- added: limit parameter to display a specifed number of items (max)
+
+--
+
+April 9/06
+- fixed: readmore-link missing when set to "show" (unless "fulltext" is set to show in which 
+  case a readmore link is pointless and therefore not display).
+
+April 6/06
+Rewrote the wretched thing
+
+changes, bugfixes, new features, confirmed bugs:
+- changed: rewrote most of the module + added comments to source code
+- fixed: query selected unpublished items
+- fixed: images got lost in merged view
+- fixed: author/createdate/modifydate got lost in merged view
+- changed: {mospagebreak} tags are now stripped from content items since item navigation wouldn't work in a module
+  position anyway.
+- added: Table of Contents in merged view
+- added: Control for CreateDate/Modifydate/Author Parameters
+- confirmed/known but nigh impossible to fix: Item Titles not formatted in merged PDF, merged PDF view
+  dissatifying, merged items TOC with table markup breaks horribly in PDF view (use lists instead). 
+  Only way out would be to write my own pdf handler which I will not do, at least not for any 1.0.x version
+- confirmed: disappearing content. Sometimes content will disappear in merged view. I have been able to 
+  reproduce this reported bug at one occasion but didn't find out what caused it. After I changed the text 
+  of the affected content item, saved it and then re-inserted the original text the item suddenly appeared, so
+  at the moment I'm clueless as to why it disappeared in the first place. One possible reason is an error in 
+  escaping the data before it was put into the database (the error being that there wasn't any escaping which is 
+  fixed now btw)
+- renamed readme.txt to changelog.txt
+- changed: re-arrangend parameter controls in a hopefully more logical order
+- not a bug: When show PDF/Print-Buttons are set to "use global" in the Modules Parameters the Parameters set
+  directly with the content item in content manager still take precedence (for example if the module is set to
+  "global" and the global value is set to "hide" and the parameter for the item is set "show" via the Content
+  Manager the button shows. I'm afraid I can't put it more clearly). This is not really a bug, I'm simply not
+  sure which parameter is supposed to have precendence in Joomla so I've just implemented it any old way.
+- confirmed/known: merged view will ignore global parameter for print/pdf (will use "hide" when set to "global").
+  Somehow related to the issue mentioned above.
+  
+WARNING: MERGED OUTPUT WILL LOOK DIFFERENT THAN IT DID IN PREVIOUS VERSIONS !!
+Instead of merging the text fields like previous versions of the modules this loads each item, formats it with the content_html show function, buffers the output and creates an temp item from the buffer. That way we keep things like images and author/date info and of course general HTML Markup. Document looks good in screen view/print view but since the pdf function ignores the HTML markup (it applies markup by database field only) the pdf view is not particularly good (titles not formatted, unwanted whitespace).
+ 
+----
+
+March 28/06
+Moved the module to Joomla Forge. It will probably need some time until I get the hang of this.
+
+----
+
+March 27. 2006
+bugfixes and new features 
+
+- fixed: titles are now included in merged view
+- Print for merged Items now works  (so you can print a section/a category)
+- you can set a global title for merged items
+- fixed: you can now use several copys of the module
+- fixed: undeclared variables $option,$page,$Itemidcount gave notices
+- fixed: un-commented erroneously commented code that drops temporary content items

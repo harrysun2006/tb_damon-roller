@@ -1,0 +1,15 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Store Information</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Store Information)</description>
+  <reference>
+  	<table name="vm_vendor">
+  		<field type="referenceid" name="vendor_id" translate="0">ID</field>
+  		<field type="titletext" name="vendor_store_name" translate="0">Store Name</field>
+  		<field type="textarea" name="vendor_store_desc" translate="1">Description</field>
+  		<field type="textarea" name="vendor_terms_of_service" translate="1">Terms of service</field>
+  	</table>
+  </reference>
+</joomfish>

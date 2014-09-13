@@ -1,0 +1,13 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Product Payment Method</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Payment Method)</description>
+  <reference>
+  	<table name="vm_payment_method">
+  		<field type="referenceid" name="payment_method_id" translate="0">ID</field>
+  		<field type="titletext" name="payment_method_name" translate="1">Name</field>
+  	</table>
+  </reference>
+</joomfish>

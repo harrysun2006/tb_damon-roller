@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jceplugin" plugin="joomla">
+	<name>Joomla Bots Plugin</name>
+	<version>1.0.1</version>
+	<creationDate>2006</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.cellardoor.za.net/jce</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>LGPL</license>
+	<description><![CDATA[
+    Joomla Bots (mosimage, mospagebreak) plugin for JCE, version 1.0.0<br />
+	Changelog (From 1.0.0):<br />
+	<ul>
+		<li>Fixed error in language file.</li>
+	</ul>
+    ]]></description>
+	<icon>mosimage,mospagebreak</icon>
+	<layout_icon>joomla</layout_icon>
+	<elements></elements>
+	<files>
+        <filename plugin="joomla">editor_plugin.js</filename>
+        <filename>index.html</filename>
+        <filename>pagebreak.htm</filename>
+        <filename>images/joomla.gif</filename>
+        <filename>images/mosimage.gif</filename>
+        <filename>images/mospagebreak.gif</filename>
+        <filename>images/index.html</filename>
+        <filename>jscripts/joomla.js</filename>
+        <filename>jscripts/index.html</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/index.html</filename>
+    </files>
+</mosinstall>

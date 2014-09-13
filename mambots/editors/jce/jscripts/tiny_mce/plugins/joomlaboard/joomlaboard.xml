@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<mosinstall version="1.0.0" type="jceplugin" plugin="joomlaboard">
+	<name>JoomlaBoard DiscussBot Plugin</name>
+	<version>1.0.0</version>
+	<creationDate>2006</creationDate>
+	<author>Ryan Demmer</author>
+	<authorEmail>ryandemmer@gmail.com</authorEmail>
+	<authorUrl>http://www.cellardoor.za.net/jce</authorUrl>
+	<copyright>Ryan Demmer</copyright>
+	<license>GPL</license>
+	<description><![CDATA[
+    JoomlaBoard DiscussBot plugin for JCE. 
+    ]]></description>
+	<icon>joomlaboard</icon>
+	<layout_icon>joomlaboard</layout_icon>
+	<elements></elements>
+	<files>
+        <filename plugin="joomla">editor_plugin.js</filename>
+        <filename>index.html</filename>
+        <filename>joomlaboard.php</filename>
+        <filename>images/joomlaboard.gif</filename>
+        <filename>images/index.html</filename>
+        <filename>jscripts/joomlaboard.js</filename>
+        <filename>jscripts/index.html</filename>
+        <filename>langs/en.js</filename>
+        <filename>langs/index.html</filename>
+    </files>
+</mosinstall>

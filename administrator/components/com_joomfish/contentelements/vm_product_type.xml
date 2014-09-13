@@ -1,0 +1,17 @@
+<?xml version="1.7" ?>
+<joomfish type="contentelement">
+  <name>VirtueMart Product Product Type</name>
+  <author>Ivo Apostolov</author>
+  <version>1.7</version>
+  <description>Definition for VirtueMart component (Product Type)</description>
+  <reference>
+  	<table name="vm_product_type">
+  		<field type="referenceid" name="product_type_id" translate="0">ID</field>
+  		<field type="titletext" name="product_type_name" translate="1">Name</field>
+  		<field type="htmltext" name="product_type_description" translate="1">Description</field>
+  	</table>
+  </reference>
+  <translationfilters>
+  	  <vm_category>category_id</vm_category>
+  </translationfilters>  	  
+</joomfish>

@@ -1,0 +1,11 @@
+.sourceIframe {
+	border: 1px solid #808080;
+}
+.error {
+    font-weight: bold;
+    color: red;
+}
+.normal {
+    font-weight: bold;
+    color: black;
+}
